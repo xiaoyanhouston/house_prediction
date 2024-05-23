@@ -13,13 +13,15 @@
 
 <body>
  <div class="login">
-	<h1>Predict House Price</h1>
+	<h1>What is your house price</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-		<input type="text" name="no_of_rooms" placeholder="Number of Rooms" required="required" />
-        <input type="text" name="area" placeholder="Area (in square feet)" required="required" />
-		<input type="text" name="house_age" placeholder="House Age" required="required" />
+		<input type="text" name=" BEDS" placeholder="Number of Bedrooms" required="required" />
+        <input type="text" name="BATHS" placeholder="Number of Bathrooms" required="required" />
+		<input type="text" name="SQUAREFEET" placeholder="Living Area(in squarefeet)" required="required" />
+        <input type="text" name="  LOTSIZE" placeholder="Lot Size (in square feet)" required="required" />
+		<input type="text" name=" YEARBUILT" placeholder="Built Year" required="required" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
@@ -29,7 +31,7 @@
    {{ prediction_text }}
 
  </div>
- <img src="/static/images/Original.svg" style="width: 400px;position: absolute;bottom: 10px;left: 10px;" alt="Company Logo"/>
+ <img src="/static/images/dallas_logo.webp" style="width: 150px;position: absolute;bottom: 10px;left: 10px;" alt="Company Logo"/>
 
 </body>
 </html>
